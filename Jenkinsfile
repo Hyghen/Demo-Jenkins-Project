@@ -1,19 +1,23 @@
 pipeline {
     agent any
+    tools {
+        maven 'Maven' 
+    }
 
     stages {
-        stage('Test') {
+        stage('Build') {
             steps {
                 sh '''
                 ls
                 date
                 cal
                 pwd
+                mvn --version
                 '''
             }
         }
             
-        stage('Build') {
+        stage('Test') {
             steps {
                 echo 'Hello World'
                 sh 'sleep 10'
