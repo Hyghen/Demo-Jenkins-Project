@@ -7,32 +7,19 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh '''
-                ls
-                date
-                cal
-                pwd
-                mvn --version
-                '''
+                sh 'mvn package'
             }
         }
             
         stage('Test') {
             steps {
-                echo 'Hello World'
-                sh 'sleep 10'
+                sh 'mvn test'
             }
         }   
-        stage('Deploy to pre-prod') {
+        stage('Deploy to Prod') {
             steps {
-                echo 'Hello World'
+                deploy adapters: [tomcat9(alternativeDeploymentContext: '', credentialsId: 'tomcatcredentials', path: '', url: 'http://192.168.1.8:8080')], contextPath: '/app', war: '**/*.war'  
             }
-        }   
-        stage('Deploy to prod') {
-            steps {
-                echo 'Hello World'
-                sh 'sleep 10'
-            }        
-        }
+        }         
     }
 }
