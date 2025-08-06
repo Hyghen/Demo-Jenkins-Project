@@ -46,6 +46,9 @@ This project demonstrates a simple CI/CD pipeline using **Jenkins**, **GitHub**,
    - Pipeline stages: `Build`, `Test`, and `Deploy to Prod`.
    - Built WAR using `mvn package`.
    - Deployed WAR file to the Tomcat server using `Deploy to Container` plugin.
+  
+     <img width="1148" height="457" alt="Screenshot 2025-08-06 212450" src="https://github.com/user-attachments/assets/736b3038-cd4d-4011-8d47-fc5eaee35d27" />
+
 
 6. **Tested the CI/CD Workflow**  
    - Made a code change and pushed to GitHub.
