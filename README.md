@@ -78,7 +78,9 @@ Check the deployed app:
 🔗 Useful Links
 
 -- Jenkins Dashboard: http://192.168.1.9:8080
+
 -- Deployed App: http://192.168.1.8:8080/app
+
 -- GitHub Repo: https://github.com/Hyghen/Demo-Jenkins-Project/
 
 📌 Technologies Used
